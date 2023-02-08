@@ -1,0 +1,13 @@
+For auto suggestion
+
+https://docs.cypress.io/guides/tooling/IDE-integration
+
+create file jsconfig.json in root directory
+
+{
+    "include": ["./node_modules/cypress", "cypress/**/*.js"]
+}
+
+Cypress API
+
+https://docs.cypress.io/api/table-of-contents

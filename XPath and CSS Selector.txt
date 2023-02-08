@@ -1,0 +1,279 @@
+XPath and CSS Selector
+
+How to add XPath 
+
+https://github.com/cypress-io/cypress-xpath
+
+Install below package
+npm install -D cypress-xpath
+
+Click  Support > Edit e2e.js file
+
+Contains function of XPath
+Text
+contains with text
+XPath Axes
+
+Abs
+
+Combination of Rel+Abs
+
+
+Css Selector
+	
+
+//tagname[contains(@attribute,'value')]
+
+	//input[contains(@name,'email')]
+	//a[contains(@href,'sign')]
+	//img[contains(@src,'ineuron.png')]
+	//div[contains(@class,'xyz')]
+	//select[contains(@id,'xyz')]
+
+
+//tagname[text()='text which you want to search']
+
+	//a[text()='New user? Signup']
+	//a[normalize-space()='New user? Signup']
+	//button[text()='Sign in']
+	//button[text()='Sign out']
+
+
+
+New user? Signup
+New user? Click here to signup
+New user? Click now to become
+
+
+//tagname[contains(text(),'text which you want to search')]
+
+	//a[contains(text(),'New user? Signup')]
+	//a[contains(text(),'New user')]
+	//a[contains(text(),'New')]
+
+
+/html/body/div[1]/div/div/div/div/div/a[1]
+
+/html/body/div[1]/div/div/div/div/div/a[4]
+
+
+//relative/abs
+
+//div[@class='social-btns']/a[1]
+//div[@class='social-btns']/a[2]
+//div[@class='social-btns']/a[3]
+//div[@class='social-btns']/a[4]
+
+
+
+
+NR
+(//div[@class='social-btns']/a)[1]
+(//div[@class='social-btns']/a)[2]
+
+
+
+//div[contains(@class,'social-links')]/div//a[@href]
+//div[contains(@class,'followus')]//a[@href]
+
+
+(//div[@class='DayPicker-Month'])[1]//div[@class='DayPicker-Week']//div[@class='dateInnerCell']/p[@class]
+
+(//div[@class='DayPicker-Month'])[1]//p[text()='30']
+
+(//div[@class='DayPicker-Month'])[2]//p[text()='30']
+
+
+
+
+//table[contains(@class,'calendar')]//a
+
+//table[contains(@class,'calendar')]//tr//td//a
+
+//table[contains(@class,'calendar')]//a
+
+//table[contains(@class,'calendar')]/tbody/tr/td/a
+
+
+//Look for tag/element
+
+/traverse based on parent node
+
+
+XPath Axes
+		//XPath//following::tagname[@attr='value']
+
+
+		//div[text()='Jasmine.Morgan']//following::a
+		//div[text()='Jasmine.Morgan']//following::img
+		//div[text()='Jasmine.Morgan']//following::input
+		//div[text()='Jasmine.Morgan']//following::div
+		//div[text()='Jasmine.Morgan']//following::*
+
+//div[text()='Jasmine.Morgan']//following::div[7]//button[1]
+//div[text()='Jasmine.Morgan']//following::div[7]//button[2]
+
+//div[text()='Jasmine.Morgan']//following::button[2]
+
+//div[text()='Nina.Patel']//following::button[2]
+
+
+//div[text()='Jasmine.Morgan']//parent::div//following-sibling::div
+
+
+//div[text()='Jasmine.Morgan']//preceding::input[1]
+//div[text()='Jasmine.Morgan']//preceding::input[2]
+
+
+===========================
+
+CSS Selector
+
+	. - class
+	# - id
+	* - contains
+	^ - starts-with
+	$ - ends-with
+	> or space if you want child elements
+
+
+single attribute
+	tagname[att="value"]
+	input[name='email1']
+	input[placeholder='Password']
+	button
+	button[type='submit']
+	input[id='login']
+
+multiple
+tagname[att="value"][att2="value"]
+tagname[att="value"],[att2="value"]
+
+#login - using id
+.login - using class
+
+
+contains
+tagname[attr*='value']
+	input[name*='email']
+	input[placeholder*='Pass']
+
+Starts
+tagname[attr^='value']
+	input[name^='email']
+		
+Ends
+tagname[attr$='value']
+	input[name$='email']
+
+Child elements
+	.social-btns a
+	.social-btns>a
+
+
+.social-btns a:nth-child(1)
+
+.social-btns a:nth-of-type(2)
+
+Text()
+no back traver
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
