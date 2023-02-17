@@ -1,0 +1,74 @@
+Configure Jenkins
+
+Download Jenkins war file
+
+All releases
+https://get.jenkins.io/war-stable/
+
+Latest Version
+https://get.jenkins.io/war-stable/2.361.2/jenkins.war
+
+Open cmd and execute below command
+java -jar C:\Users\l\Downloads\jenkins.war 
+
+If you want to change port number
+java -jar C:\Users\l\Downloads\jenkins.war --httpPort=8081
+
+Access Jenkins via
+	http://127.0.0.1:8080
+	http://localhost:8080
+	
+
+1- Password- Secret Key
+	787876767uajsdaksdas888
+
+2- Install suggested Plugin or Select Plugin Manually
+	
+3- Enter all basic details
+	name email password etc
+
+4- All set and now lets configure
+
+5- Configure System
+		Number Of Executor - 5
+		Email Configuration
+				smtp.gmail.com
+				465
+				username
+				password - app password
+					login to gmail
+					myaccount
+					security
+					turn on 2 factor
+					click on app password
+						mail
+						window
+					generate app password > copy 
+				test email- Success
+
+6- Create a sample job > build > execute windows batch command
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
